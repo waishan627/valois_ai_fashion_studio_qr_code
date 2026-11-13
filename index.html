@@ -98,13 +98,6 @@
         input[type=range] {
             accent-color: #d4af37;
         }
-        .pulse-subtle {
-            animation: pulse-glow 3s infinite alternate;
-        }
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.15); }
-            100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
-        }
         #qr-code-container {
             display: flex;
             align-items: center;
@@ -129,18 +122,18 @@
         <div class="glass-panel-gold max-w-md w-full p-6 rounded-2xl border border-gold-500/40 text-center space-y-5 my-auto shadow-2xl">
             <div class="flex items-center justify-center space-x-2">
                 <div class="w-8 h-8 rounded-full border border-gold-500/50 flex items-center justify-center bg-gold-500/10 text-gold-400 font-serif font-bold text-base">V</div>
-                <span class="font-serif text-lg font-bold gold-gradient-text tracking-widest uppercase">VALOIS Lookbook Share</span>
+                <span class="font-serif text-lg font-bold gold-gradient-text tracking-widest uppercase">NTHYKTPDSS STEAM 2026</span>
             </div>
             <p class="text-xs text-gray-300">Your captured Virtual Atelier look is ready to save to your mobile device.</p>
             <div class="bg-black/80 rounded-xl overflow-hidden border border-gold-500/30 p-2 flex items-center justify-center">
                 <img id="mobile-received-img" src="" alt="Received Valois Look" class="max-h-[50vh] w-auto object-contain rounded-lg">
             </div>
             <div class="flex flex-col gap-2.5 pt-2">
-                <a id="mobile-received-download-btn" href="#" download="VALOIS_Look.jpg" class="w-full px-4 py-3 gold-gradient-bg text-black font-bold rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition flex items-center justify-center gap-2 shadow-lg overflow-hidden">
+                <a id="mobile-received-download-btn" href="#" download="NTHYKTPDSS_Look.jpg" class="w-full px-4 py-3 gold-gradient-bg text-black font-bold rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition flex items-center justify-center gap-2 shadow-lg overflow-hidden">
                     <i class="fa-solid fa-download shrink-0"></i> <span>Download Image to Device</span>
                 </a>
                 <button onclick="closeMobileReceiveView()" class="w-full px-4 py-2.5 bg-white/10 hover:bg-white/20 text-gray-300 rounded-xl text-xs font-medium transition">
-                    Continue to VALOIS Virtual Atelier
+                    Continue to NTHYKTPDSS STEAM 2026 Atelier
                 </button>
             </div>
         </div>
@@ -165,7 +158,7 @@
                     <div class="aspect-[3/4] bg-black/80 rounded-xl overflow-hidden border border-white/15 flex items-center justify-center relative">
                         <img id="qr-modal-img" src="" alt="Captured Snapshot" class="w-full h-full object-contain">
                         <div class="absolute bottom-2 right-2 bg-black/70 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] text-gold-300 border border-gold-500/30 font-serif">
-                            VALOIS PARIS
+                            NTHYKTPDSS STEAM 2026
                         </div>
                     </div>
                     <div class="text-center">
@@ -233,8 +226,8 @@
                     V
                 </div>
                 <div>
-                    <h1 class="font-serif text-2xl font-bold tracking-widest gold-gradient-text uppercase">VALOIS</h1>
-                    <p class="text-[10px] text-gold-400/80 tracking-widest uppercase">HAUTE COUTURE AI & AR ATELIER</p>
+                    <h1 class="font-serif text-xl font-bold tracking-widest gold-gradient-text uppercase">NTHYKTPDSS STEAM 2026</h1>
+                    <p class="text-[10px] text-gold-400/80 tracking-widest uppercase">AI & AR VIRTUAL ATELIER</p>
                 </div>
             </div>
 
@@ -323,22 +316,27 @@
 
                             <!-- Canvas Watermark / Brand Badge -->
                             <div class="absolute bottom-4 right-4 pointer-events-none text-right opacity-60">
-                                <span class="font-serif text-lg font-bold gold-gradient-text tracking-widest block">VALOIS</span>
-                                <span class="text-[9px] text-gray-400 tracking-wider">PARIS • NEW YORK</span>
+                                <span class="font-serif text-lg font-bold gold-gradient-text tracking-widest block">NTHYKTPDSS STEAM 2026</span>
+                                <span class="text-[9px] text-gray-400 tracking-wider">AI & AR VIRTUAL ATELIER</span>
                             </div>
                         </div>
 
                         <!-- Posture Alignment Toggle Button & Capture Snapshot Bar -->
                         <div class="w-full mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 bg-surface/80 p-3 rounded-xl border border-white/5">
-                            <div class="flex items-center space-x-3 w-full sm:w-auto">
+                            <div class="flex items-center flex-wrap gap-2 w-full sm:w-auto">
                                 <!-- Mandatory Posture Alignment Guide Toggle -->
-                                <button id="btn-posture-toggle" onclick="togglePostureGuide()" class="flex-1 sm:flex-none px-4 py-2 bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 rounded-lg text-xs font-semibold border border-gold-500/40 transition flex items-center justify-center gap-2 shadow-lg">
+                                <button id="btn-posture-toggle" onclick="togglePostureGuide()" class="px-3 py-2 bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 rounded-lg text-xs font-semibold border border-gold-500/40 transition flex items-center justify-center gap-2 shadow-lg">
                                     <i class="fa-solid fa-child-reaching text-sm"></i>
-                                    <span id="posture-btn-text">Toggle Position Guide [ON]</span>
+                                    <span id="posture-btn-text">Guide [ON]</span>
                                 </button>
                                 
-                                <button onclick="toggleSkinSamplerVisibility()" class="px-3 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg text-xs font-medium border border-white/10 transition flex items-center gap-2">
-                                    <i class="fa-solid fa-eye text-gold-400"></i> Sampler Box
+                                <!-- Garment Toggle Button -->
+                                <button id="btn-garment-toggle" onclick="toggleGarmentTryOn()" class="px-3 py-2 bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 rounded-lg text-xs font-semibold border border-gold-500/40 transition flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-shirt"></i> <span id="garment-toggle-text">Garment [ON]</span>
+                                </button>
+
+                                <button onclick="toggleSkinSamplerVisibility()" class="px-3 py-2 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg text-xs font-medium border border-white/10 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-eye text-gold-400"></i> Sampler
                                 </button>
                             </div>
 
@@ -350,19 +348,30 @@
 
                     </div>
 
-                    <!-- AR TAILORING FINE-TUNING SLIDERS PANEL -->
-                    <div class="glass-panel p-5 rounded-2xl border border-white/10">
-                        <h3 class="font-serif text-sm font-semibold text-gold-300 uppercase tracking-wider mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-sliders text-gold-400"></i> AR Precision Tailoring Controls
-                        </h3>
+                    <!-- AR TAILORING & ACCESSORY FINE-TUNING SLIDERS PANEL -->
+                    <div class="glass-panel p-5 rounded-2xl border border-white/10 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h3 class="font-serif text-sm font-semibold text-gold-300 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-sliders text-gold-400"></i> AR Precision Tailoring & Jewelry Controls
+                            </h3>
+                            <div class="flex items-center gap-1.5 bg-black/50 p-1 rounded-lg border border-white/10 text-[11px]">
+                                <button id="target-btn-garment" onclick="setSliderTarget('garment')" class="px-2.5 py-1 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30 font-semibold transition">
+                                    <i class="fa-solid fa-shirt mr-1"></i> Garment Fit
+                                </button>
+                                <button id="target-btn-accessories" onclick="setSliderTarget('accessories')" class="px-2.5 py-1 rounded text-gray-400 hover:text-white font-medium transition">
+                                    <i class="fa-solid fa-gem mr-1"></i> Accessories Fit
+                                </button>
+                            </div>
+                        </div>
+
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <!-- Garment Scale -->
+                            <!-- Scale -->
                             <div class="bg-surface p-3 rounded-xl border border-white/5">
                                 <div class="flex justify-between text-xs mb-1.5">
-                                    <span class="text-gray-400 font-medium">Garment Scale</span>
+                                    <span id="lbl-scale" class="text-gray-400 font-medium">Garment Scale</span>
                                     <span id="val-scale" class="text-gold-400 font-mono">1.00x</span>
                                 </div>
-                                <input type="range" id="slider-scale" min="0.5" max="2.0" step="0.02" value="1.0" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <input type="range" id="slider-scale" min="0.4" max="2.2" step="0.02" value="1.0" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
                             </div>
 
                             <!-- Vertical Offset (Y) -->
@@ -371,7 +380,7 @@
                                     <span class="text-gray-400 font-medium">Vertical Shift (Y)</span>
                                     <span id="val-offset-y" class="text-gold-400 font-mono">0px</span>
                                 </div>
-                                <input type="range" id="slider-offset-y" min="-150" max="150" step="2" value="0" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <input type="range" id="slider-offset-y" min="-180" max="180" step="2" value="0" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
                             </div>
 
                             <!-- Horizontal Offset (X) -->
@@ -380,17 +389,51 @@
                                     <span class="text-gray-400 font-medium">Horizontal Shift (X)</span>
                                     <span id="val-offset-x" class="text-gold-400 font-mono">0px</span>
                                 </div>
-                                <input type="range" id="slider-offset-x" min="-150" max="150" step="2" value="0" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                                <input type="range" id="slider-offset-x" min="-180" max="180" step="2" value="0" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
                             </div>
 
                             <!-- Transparency Opacity -->
                             <div class="bg-surface p-3 rounded-xl border border-white/5">
                                 <div class="flex justify-between text-xs mb-1.5">
-                                    <span class="text-gray-400 font-medium">Garment Opacity</span>
+                                    <span id="lbl-opacity" class="text-gray-400 font-medium">Garment Opacity</span>
                                     <span id="val-opacity" class="text-gold-400 font-mono">90%</span>
                                 </div>
                                 <input type="range" id="slider-opacity" min="0.1" max="1.0" step="0.05" value="0.9" oninput="updateSliderValues()" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer">
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- VIRTUAL JEWELRY & ACCESSORIES TRY-ON STUDIO BAR -->
+                    <div class="glass-panel p-5 rounded-2xl border border-gold-500/30 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                            <div>
+                                <h3 class="font-serif text-sm font-semibold text-gold-300 uppercase tracking-wider flex items-center gap-2">
+                                    <i class="fa-solid fa-gem text-gold-400"></i> Haute Joaillerie & Accessories Virtual Try-On
+                                </h3>
+                                <p class="text-[11px] text-gray-400">Click to equip or layer necklaces, bracelets, rings, hair clips, earrings & eyewear in real time.</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="equipped-accessories-badge" class="text-[11px] bg-gold-500/15 text-gold-300 px-2.5 py-1 rounded-full border border-gold-500/30 font-medium">0 Equipped</span>
+                                <button onclick="clearAllAccessories()" class="px-3 py-1 bg-white/5 hover:bg-rose-500/20 text-gray-300 hover:text-rose-300 rounded-lg text-[11px] border border-white/10 transition">
+                                    <i class="fa-solid fa-xmark mr-1"></i> Remove All
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Category Filter Pills for Accessories -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                            <button onclick="filterAccessoryBar('all', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-gold-500/20 text-gold-300 border border-gold-500/30 font-medium shrink-0">All Jewelry</button>
+                            <button onclick="filterAccessoryBar('necklace', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0">Necklaces</button>
+                            <button onclick="filterAccessoryBar('hairclip', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0">Hair Clips & Tiaras</button>
+                            <button onclick="filterAccessoryBar('earrings', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0">Earrings</button>
+                            <button onclick="filterAccessoryBar('bracelet', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0">Bracelets</button>
+                            <button onclick="filterAccessoryBar('ring', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0">Rings</button>
+                            <button onclick="filterAccessoryBar('eyewear', this)" class="acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0">Couture Eyewear</button>
+                        </div>
+
+                        <!-- Accessories Selection Carousel Grid -->
+                        <div id="atelier-accessories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                            <!-- Dynamically populated via JS -->
                         </div>
                     </div>
                 </div>
@@ -524,6 +567,7 @@
                     <button onclick="filterCatalog('outerwear')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-surface text-gray-400 hover:text-white border border-white/5">Outerwear</button>
                     <button onclick="filterCatalog('dresses')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-surface text-gray-400 hover:text-white border border-white/5">Gowns & Dresses</button>
                     <button onclick="filterCatalog('tailored')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-surface text-gray-400 hover:text-white border border-white/5">Tailored Suits</button>
+                    <button onclick="filterCatalog('accessories')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-surface text-gray-400 hover:text-white border border-white/5"><i class="fa-solid fa-gem text-gold-400 mr-1"></i> Jewelry & Accessories</button>
                     <button onclick="filterCatalog('custom')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-surface text-gray-400 hover:text-white border border-white/5"><i class="fa-solid fa-sparkles text-gold-400"></i> My Uploads</button>
                 </div>
             </div>
@@ -840,7 +884,7 @@
     <footer class="glass-panel border-t border-white/10 py-6 px-4 text-center text-xs text-gray-500 mt-12">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center space-x-2">
-                <span class="font-serif font-bold text-gold-400">VALOIS</span>
+                <span class="font-serif font-bold text-gold-400">NTHYKTPDSS STEAM 2026</span>
                 <span>• AI Real-Time AR Virtual Fitting Engine</span>
             </div>
             <div>
@@ -858,16 +902,35 @@
             videoSource: 'demo', // Default to demo model for instant visual start
             webcamStream: null,
             postureGuideEnabled: true,
+            garmentTryOnEnabled: true, // Toggle for garment visibility
             samplerBoxVisible: true,
             sampledColor: { r: 210, g: 163, b: 130, hex: '#D2A382' },
             eyedropperColor: null,
-            // AR Fine-Tuning Sliders
+            sliderTarget: 'garment', // 'garment' or 'accessories'
+            // AR Fine-Tuning Sliders (Garment)
             sliders: {
                 scale: 1.0,
                 offsetY: 0,
                 offsetX: 0,
                 opacity: 0.9
             },
+            // AR Fine-Tuning Sliders (Accessories)
+            accessorySliders: {
+                scale: 1.0,
+                offsetY: 0,
+                offsetX: 0,
+                opacity: 0.98
+            },
+            // Active Equipped Accessories by Slot
+            activeAccessories: {
+                necklace: null,
+                hairclip: null,
+                earrings: null,
+                bracelet: null,
+                ring: null,
+                eyewear: null
+            },
+            accessoryFilter: 'all',
             // Draggable Bounding Box position on Canvas
             samplerBox: {
                 x: 0.42, // normalized (0 to 1)
@@ -910,10 +973,14 @@
                     </linearGradient>
                 </defs>
                 <rect width="600" height="800" fill="url(#bgGrad)" />
-                <!-- Backdrop Atelier Lighting Arc -->
                 <circle cx="300" cy="300" r="240" fill="none" stroke="#d4af37" stroke-opacity="0.15" stroke-width="2" stroke-dasharray="10 10"/>
                 <!-- Neck & Shoulders -->
                 <path d="M 270,220 L 330,220 L 350,290 L 440,360 L 160,360 L 250,290 Z" fill="url(#skinGrad)" />
+                <!-- Arms & Hands for Bracelet / Ring Try-On -->
+                <path d="M 160,360 L 125,540 L 165,640 L 198,630 L 175,530 L 200,360 Z" fill="url(#skinGrad)" />
+                <path d="M 440,360 L 475,540 L 435,640 L 402,630 L 425,530 L 400,360 Z" fill="url(#skinGrad)" />
+                <ellipse cx="180" cy="650" rx="22" ry="30" fill="url(#skinGrad)" />
+                <ellipse cx="420" cy="650" rx="22" ry="30" fill="url(#skinGrad)" />
                 <!-- Torso Base -->
                 <path d="M 200,350 L 400,350 L 370,680 L 230,680 Z" fill="#181820" />
                 <!-- Head & Face Silhouette -->
@@ -970,48 +1037,137 @@
             }
         ];
 
+        // Curated Luxury Haute Joaillerie & Accessories Catalog
+        const AccessoryItems = [
+            {
+                id: 'acc-necklace-1',
+                title: 'Lumière Diamond Rivière Necklace',
+                slot: 'necklace',
+                category: 'accessories',
+                material: '18K Gold & Pavé Diamonds',
+                collection: 'Valois Haute Joaillerie',
+                price: '$14,500 USD',
+                description: 'Articulated collar necklace set with graduated pear-cut diamonds and a central canary drop.',
+                imageUrl: createSVGAccessoryDataURI('necklace-diamond')
+            },
+            {
+                id: 'acc-necklace-2',
+                title: 'Imperial South Sea Pearl Choker',
+                slot: 'necklace',
+                category: 'accessories',
+                material: 'Baroque Pearls & Vermeil',
+                collection: 'Valois Royal Archive',
+                price: '$6,800 USD',
+                description: 'Double-strand luminous pearl choker accented with an emerald-cut golden clasp.',
+                imageUrl: createSVGAccessoryDataURI('necklace-pearl')
+            },
+            {
+                id: 'acc-hairclip-1',
+                title: 'Céleste Golden Pearl Hair Barrette',
+                slot: 'hairclip',
+                category: 'accessories',
+                material: '24K Plated Brass & Pearl',
+                collection: 'Valois Bridal & Gala',
+                price: '$890 USD',
+                description: 'Sculptural botanical hair clip adorned with freshwater pearls and crystal leaves.',
+                imageUrl: createSVGAccessoryDataURI('hairclip-barrette')
+            },
+            {
+                id: 'acc-hairclip-2',
+                title: 'Sovereign Crystal Starburst Tiara',
+                slot: 'hairclip',
+                category: 'accessories',
+                material: 'Platinum & Marquise Crystals',
+                collection: 'Met Gala Capsule',
+                price: '$9,200 USD',
+                description: 'Regal diadem crown featuring celestial spires set with brilliant-cut diamonds.',
+                imageUrl: createSVGAccessoryDataURI('hairclip-tiara')
+            },
+            {
+                id: 'acc-earrings-1',
+                title: 'Étoile Chandelier Drop Earrings',
+                slot: 'earrings',
+                category: 'accessories',
+                material: '18K Yellow Gold & Topaz',
+                collection: 'Valois Haute Joaillerie',
+                price: '$4,200 USD',
+                description: 'Twin-pair cascading chandelier earrings that frame the jawline with warm golden brilliance.',
+                imageUrl: createSVGAccessoryDataURI('earrings-drop')
+            },
+            {
+                id: 'acc-bracelet-1',
+                title: 'Serpentine Sculpted Gold Cuff',
+                slot: 'bracelet',
+                category: 'accessories',
+                material: 'Hammered 18K Gold',
+                collection: 'Valois Resort',
+                price: '$3,900 USD',
+                description: 'Statement architectural wrist cuff inlaid with emerald eyes and diamond scales.',
+                imageUrl: createSVGAccessoryDataURI('bracelet-cuff')
+            },
+            {
+                id: 'acc-ring-1',
+                title: 'Solitaire Emerald & Diamond Ring',
+                slot: 'ring',
+                category: 'accessories',
+                material: 'Colombian Emerald & Gold',
+                collection: 'Valois Haute Joaillerie',
+                price: '$18,000 USD',
+                description: 'Octagonal step-cut emerald cocktail ring surrounded by a halo of tapered baguettes.',
+                imageUrl: createSVGAccessoryDataURI('ring-emerald')
+            },
+            {
+                id: 'acc-eyewear-1',
+                title: 'Aviateur Gilded Couture Frames',
+                slot: 'eyewear',
+                category: 'accessories',
+                material: 'Titanium & 24K Gold Leaf',
+                collection: 'Paris Runway Eyewear',
+                price: '$1,150 USD',
+                description: 'Ultra-lightweight rimless gradient sunglasses with filigree gold temple detailing.',
+                imageUrl: createSVGAccessoryDataURI('eyewear-couture')
+            }
+        ];
+
+        // Preloaded Image Cache for Accessories
+        const AccessoryImageCache = {};
+        function preloadAccessoryImages() {
+            AccessoryItems.forEach(item => {
+                const img = new Image();
+                img.src = item.imageUrl;
+                AccessoryImageCache[item.id] = img;
+            });
+        }
+
         let canvas, ctx, videoEl, demoImgEl, garmentImgEl;
         let poseDetector = null;
         let isPoseProcessing = false;
         let poseLoadError = false;
 
         window.onload = function() {
-            // Check if page was opened via a scanned QR code mobile share hash
             checkIncomingQrShareHash();
 
-            // DOM Reference Initialization
             canvas = document.getElementById('ar-canvas');
             ctx = canvas.getContext('2d', { willReadFrequently: true });
             videoEl = document.getElementById('webcam-video');
             demoImgEl = document.getElementById('demo-model-img');
             garmentImgEl = document.getElementById('active-garment-img');
 
-            // Load Inline Demo Model Image Data URI
             demoImgEl.src = createDemoModelSVGDataURI();
 
-            // Set initial active garment
+            preloadAccessoryImages();
+            renderAtelierAccessoriesBar();
+
             setGarment(CatalogItems[0]);
-
-            // Setup Canvas Event Listeners for Draggable Sampler Box
             setupCanvasDragEvents();
-
-            // Populate Catalog HTML Grid
             renderWardrobeGrid();
-
-            // Load Stored Snapshots from Website LocalStorage & Render Galleries
             loadStoredSnapshots();
-
-            // Initialize MediaPipe Pose Tracker
             initPoseDetection();
 
-            // Start Canvas Render Loop
             requestAnimationFrame(renderLoop);
-
-            // Update Swatches Display
             updateColorPaletteSwatches('#D2A382');
         };
 
-        // Check URL hash for #qrshare= data when user scans QR code on another device
         function checkIncomingQrShareHash() {
             const hash = window.location.hash;
             if (hash && hash.startsWith('#qrshare=')) {
@@ -1023,7 +1179,7 @@
                         const dlBtn = document.getElementById('mobile-received-download-btn');
                         img.src = encodedData;
                         dlBtn.href = encodedData;
-                        dlBtn.download = `VALOIS_Look_${Date.now()}.jpg`;
+                        dlBtn.download = `NTHYKTPDSS_Look_${Date.now()}.jpg`;
                         modal.classList.remove('hidden');
                     }
                 } catch (e) {
@@ -1034,7 +1190,6 @@
 
         function closeMobileReceiveView() {
             document.getElementById('mobile-qr-receive-view').classList.add('hidden');
-            // Clean hash without reloading
             history.replaceState(null, null, ' ');
         }
 
@@ -1120,22 +1275,22 @@
             }
         }
 
-        // Core helper to draw only the clean scene (Model/Webcam + Garment + Brand Watermark) onto any target canvas context
+        // Core helper to draw the clean scene (Base + Garment + Accessories)
         function renderCleanSceneToContext(targetCtx, w, h) {
             targetCtx.clearRect(0, 0, w, h);
 
-            // 1. Draw Base Layer (Video Feed or Demo Model)
             let sourceImg = (AppState.videoSource === 'camera' && videoEl.readyState >= 2) ? videoEl : demoImgEl;
             targetCtx.save();
             if (AppState.videoSource === 'camera') {
                 targetCtx.translate(w, 0);
                 targetCtx.scale(-1, 1);
             }
-            targetCtx.drawImage(sourceImg, 0, 0, w, h);
+            if (sourceImg && (sourceImg.tagName === 'VIDEO' || (sourceImg.complete && sourceImg.naturalWidth !== 0))) {
+                targetCtx.drawImage(sourceImg, 0, 0, w, h);
+            }
             targetCtx.restore();
 
-            // 2. Draw Garment Overlay Layer
-            if (garmentImgEl.complete && garmentImgEl.naturalWidth !== 0) {
+            if (AppState.garmentTryOnEnabled && garmentImgEl && garmentImgEl.complete && garmentImgEl.naturalWidth !== 0 && garmentImgEl.src) {
                 targetCtx.save();
                 targetCtx.globalAlpha = AppState.sliders.opacity;
 
@@ -1165,20 +1320,119 @@
                 anchorX += parseInt(AppState.sliders.offsetX);
                 anchorY += parseInt(AppState.sliders.offsetY);
 
-                targetCtx.drawImage(
-                    garmentImgEl,
-                    anchorX - garmentW / 2,
-                    anchorY - (garmentH * 0.15),
-                    garmentW,
-                    garmentH
-                );
+                try {
+                    targetCtx.drawImage(
+                        garmentImgEl,
+                        anchorX - garmentW / 2,
+                        anchorY - (garmentH * 0.15),
+                        garmentW,
+                        garmentH
+                    );
+                } catch (e) {}
 
                 targetCtx.restore();
             }
+
+            renderAccessoriesToContext(targetCtx, w, h);
+        }
+
+        function renderAccessoriesToContext(targetCtx, w, h) {
+            targetCtx.save();
+            targetCtx.globalAlpha = AppState.accessorySliders.opacity;
+
+            const accScale = AppState.accessorySliders.scale;
+            const ox = AppState.accessorySliders.offsetX;
+            const oy = AppState.accessorySliders.offsetY;
+
+            let headX = w / 2 + ox;
+            let headY = h * 0.17 + oy;
+            let neckX = w / 2 + ox;
+            let neckY = h * 0.34 + oy;
+            let leftWristX = w * 0.32 + ox;
+            let leftWristY = h * 0.75 + oy;
+            let rightHandX = w * 0.68 + ox;
+            let rightHandY = h * 0.75 + oy;
+
+            if (AppState.poseLandmarks) {
+                if (AppState.poseLandmarks[0]) {
+                    headX = (AppState.videoSource === 'camera' ? (1 - AppState.poseLandmarks[0].x) * w : AppState.poseLandmarks[0].x * w) + ox;
+                    headY = (AppState.poseLandmarks[0].y * h) + oy;
+                }
+                if (AppState.poseLandmarks[11] && AppState.poseLandmarks[12]) {
+                    const lSh = AppState.poseLandmarks[11];
+                    const rSh = AppState.poseLandmarks[12];
+                    let lsX = AppState.videoSource === 'camera' ? (1 - lSh.x) * w : lSh.x * w;
+                    let rsX = AppState.videoSource === 'camera' ? (1 - rSh.x) * w : rSh.x * w;
+                    neckX = ((lsX + rsX) / 2) + ox;
+                    neckY = (((lSh.y + rSh.y) / 2) * h) + oy - 15;
+                }
+                if (AppState.poseLandmarks[15]) {
+                    leftWristX = (AppState.videoSource === 'camera' ? (1 - AppState.poseLandmarks[15].x) * w : AppState.poseLandmarks[15].x * w) + ox;
+                    leftWristY = (AppState.poseLandmarks[15].y * h) + oy;
+                }
+                if (AppState.poseLandmarks[16]) {
+                    rightHandX = (AppState.videoSource === 'camera' ? (1 - AppState.poseLandmarks[16].x) * w : AppState.poseLandmarks[16].x * w) + ox;
+                    rightHandY = (AppState.poseLandmarks[16].y * h) + oy;
+                }
+            }
+
+            function drawAcc(item, x, y, width, height) {
+                if (!item) return;
+                const img = AccessoryImageCache[item.id] || new Image();
+                if (!img.src) img.src = item.imageUrl;
+                if (img.complete && img.naturalWidth !== 0) {
+                    try {
+                        targetCtx.drawImage(img, x - width / 2, y - height / 2, width, height);
+                    } catch (err) {}
+                }
+            }
+
+            if (AppState.activeAccessories.eyewear) {
+                const item = AppState.activeAccessories.eyewear;
+                const ewW = w * 0.32 * accScale;
+                const ewH = ewW * 0.35;
+                drawAcc(item, headX, headY + 12, ewW, ewH);
+            }
+
+            if (AppState.activeAccessories.earrings) {
+                const item = AppState.activeAccessories.earrings;
+                const erW = w * 0.28 * accScale;
+                const erH = erW * 0.44;
+                drawAcc(item, headX, headY + 45, erW, erH);
+            }
+
+            if (AppState.activeAccessories.hairclip) {
+                const item = AppState.activeAccessories.hairclip;
+                const hcW = w * 0.25 * accScale;
+                const hcH = hcW * 0.5;
+                drawAcc(item, headX, headY - 45, hcW, hcH);
+            }
+
+            if (AppState.activeAccessories.necklace) {
+                const item = AppState.activeAccessories.necklace;
+                const ncW = w * 0.42 * accScale;
+                const ncH = ncW * 0.65;
+                drawAcc(item, neckX, neckY + 30, ncW, ncH);
+            }
+
+            if (AppState.activeAccessories.bracelet) {
+                const item = AppState.activeAccessories.bracelet;
+                const brW = w * 0.15 * accScale;
+                const brH = brW * 0.65;
+                drawAcc(item, leftWristX, leftWristY, brW, brH);
+            }
+
+            if (AppState.activeAccessories.ring) {
+                const item = AppState.activeAccessories.ring;
+                const rgW = w * 0.10 * accScale;
+                const rgH = rgW;
+                drawAcc(item, rightHandX, rightHandY, rgW, rgH);
+            }
+
+            targetCtx.restore();
         }
 
         function renderLoop() {
-            // Resize Canvas buffer to match element aspect ratio dynamically
             if (canvas.width !== canvas.clientWidth || canvas.height !== canvas.clientHeight) {
                 canvas.width = canvas.clientWidth || 600;
                 canvas.height = canvas.clientHeight || 800;
@@ -1187,7 +1441,6 @@
             const w = canvas.width;
             const h = canvas.height;
 
-            // Render Base & Garment Layers
             renderCleanSceneToContext(ctx, w, h);
 
             if (poseDetector && !poseLoadError && !isPoseProcessing && AppState.videoSource === 'camera' && videoEl.readyState >= 2) {
@@ -1201,12 +1454,10 @@
                 });
             }
 
-            // 3. DRAW POSTURE ALIGNMENT SILHOUETTE OVERLAY (if toggled ON)
             if (AppState.postureGuideEnabled) {
                 drawPostureSilhouetteGuide(w, h);
             }
 
-            // 4. DRAW DRAGGABLE SKIN TONE SAMPLER BOX
             if (AppState.samplerBoxVisible) {
                 drawSkinSamplerBox(w, h);
             }
@@ -1276,9 +1527,7 @@
                         updateSkinColorUI(hex, r, g, b);
                     }
                 }
-            } catch (e) {
-                // Smooth catch
-            }
+            } catch (e) {}
 
             ctx.save();
             ctx.strokeStyle = '#d4af37';
@@ -1407,13 +1656,29 @@
             const btn = document.getElementById('btn-posture-toggle');
             
             if (AppState.postureGuideEnabled) {
-                btnText.innerText = "Toggle Position Guide [ON]";
-                btn.className = "flex-1 sm:flex-none px-4 py-2 bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 rounded-lg text-xs font-semibold border border-gold-500/40 transition flex items-center justify-center gap-2 shadow-lg";
+                btnText.innerText = "Guide [ON]";
+                btn.className = "px-3 py-2 bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 rounded-lg text-xs font-semibold border border-gold-500/40 transition flex items-center justify-center gap-2 shadow-lg";
                 showToast("Posture Position Guide Enabled", "info");
             } else {
-                btnText.innerText = "Toggle Position Guide [OFF]";
-                btn.className = "flex-1 sm:flex-none px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-400 rounded-lg text-xs font-semibold border border-white/10 transition flex items-center justify-center gap-2";
+                btnText.innerText = "Guide [OFF]";
+                btn.className = "px-3 py-2 bg-white/5 hover:bg-white/10 text-gray-400 rounded-lg text-xs font-semibold border border-white/10 transition flex items-center justify-center gap-2";
                 showToast("Posture Position Guide Hidden", "info");
+            }
+        }
+
+        function toggleGarmentTryOn() {
+            AppState.garmentTryOnEnabled = !AppState.garmentTryOnEnabled;
+            const btnText = document.getElementById('garment-toggle-text');
+            const btn = document.getElementById('btn-garment-toggle');
+
+            if (AppState.garmentTryOnEnabled) {
+                btnText.innerText = "Garment [ON]";
+                btn.className = "px-3 py-2 bg-gold-500/20 hover:bg-gold-500/30 text-gold-300 rounded-lg text-xs font-semibold border border-gold-500/40 transition flex items-center gap-1.5 shadow-lg";
+                showToast("Garment Try-On Enabled", "success");
+            } else {
+                btnText.innerText = "Garment [OFF]";
+                btn.className = "px-3 py-2 bg-white/5 hover:bg-white/10 text-gray-400 rounded-lg text-xs font-semibold border border-white/10 transition flex items-center gap-1.5";
+                showToast("Garment Try-On Off (Accessories Only)", "info");
             }
         }
 
@@ -1434,42 +1699,158 @@
             }
         }
 
-        function updateSliderValues() {
-            AppState.sliders.scale = parseFloat(document.getElementById('slider-scale').value);
-            AppState.sliders.offsetY = parseInt(document.getElementById('slider-offset-y').value);
-            AppState.sliders.offsetX = parseInt(document.getElementById('slider-offset-x').value);
-            AppState.sliders.opacity = parseFloat(document.getElementById('slider-opacity').value);
+        function setSliderTarget(target) {
+            AppState.sliderTarget = target;
+            const btnGarment = document.getElementById('target-btn-garment');
+            const btnAcc = document.getElementById('target-btn-accessories');
+            const lblScale = document.getElementById('lbl-scale');
+            const lblOpacity = document.getElementById('lbl-opacity');
 
-            document.getElementById('val-scale').innerText = AppState.sliders.scale.toFixed(2) + 'x';
-            document.getElementById('val-offset-y').innerText = AppState.sliders.offsetY + 'px';
-            document.getElementById('val-offset-x').innerText = AppState.sliders.offsetX + 'px';
-            document.getElementById('val-opacity').innerText = Math.round(AppState.sliders.opacity * 100) + '%';
+            if (target === 'accessories') {
+                btnAcc.className = "px-2.5 py-1 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30 font-semibold transition";
+                btnGarment.className = "px-2.5 py-1 rounded text-gray-400 hover:text-white font-medium transition";
+                lblScale.innerText = "Jewelry Scale";
+                lblOpacity.innerText = "Jewelry Opacity";
+
+                document.getElementById('slider-scale').value = AppState.accessorySliders.scale;
+                document.getElementById('slider-offset-y').value = AppState.accessorySliders.offsetY;
+                document.getElementById('slider-offset-x').value = AppState.accessorySliders.offsetX;
+                document.getElementById('slider-opacity').value = AppState.accessorySliders.opacity;
+            } else {
+                btnGarment.className = "px-2.5 py-1 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30 font-semibold transition";
+                btnAcc.className = "px-2.5 py-1 rounded text-gray-400 hover:text-white font-medium transition";
+                lblScale.innerText = "Garment Scale";
+                lblOpacity.innerText = "Garment Opacity";
+
+                document.getElementById('slider-scale').value = AppState.sliders.scale;
+                document.getElementById('slider-offset-y').value = AppState.sliders.offsetY;
+                document.getElementById('slider-offset-x').value = AppState.sliders.offsetX;
+                document.getElementById('slider-opacity').value = AppState.sliders.opacity;
+            }
+            updateSliderValues();
+        }
+
+        function updateSliderValues() {
+            const s = parseFloat(document.getElementById('slider-scale').value);
+            const oy = parseInt(document.getElementById('slider-offset-y').value);
+            const ox = parseInt(document.getElementById('slider-offset-x').value);
+            const op = parseFloat(document.getElementById('slider-opacity').value);
+
+            if (AppState.sliderTarget === 'accessories') {
+                AppState.accessorySliders.scale = s;
+                AppState.accessorySliders.offsetY = oy;
+                AppState.accessorySliders.offsetX = ox;
+                AppState.accessorySliders.opacity = op;
+            } else {
+                AppState.sliders.scale = s;
+                AppState.sliders.offsetY = oy;
+                AppState.sliders.offsetX = ox;
+                AppState.sliders.opacity = op;
+            }
+
+            document.getElementById('val-scale').innerText = s.toFixed(2) + 'x';
+            document.getElementById('val-offset-y').innerText = oy + 'px';
+            document.getElementById('val-offset-x').innerText = ox + 'px';
+            document.getElementById('val-opacity').innerText = Math.round(op * 100) + '%';
         }
 
         function resetSliders() {
-            document.getElementById('slider-scale').value = 1.0;
-            document.getElementById('slider-offset-y').value = 0;
-            document.getElementById('slider-offset-x').value = 0;
-            document.getElementById('slider-opacity').value = 0.9;
-            updateSliderValues();
-            showToast("Tailoring controls reset to default", "info");
+            AppState.sliders = { scale: 1.0, offsetY: 0, offsetX: 0, opacity: 0.9 };
+            AppState.accessorySliders = { scale: 1.0, offsetY: 0, offsetX: 0, opacity: 0.98 };
+            setSliderTarget(AppState.sliderTarget);
+            showToast("Garment & Jewelry positioning reset to default", "info");
+        }
+
+        function toggleAccessoryById(accId) {
+            const item = AccessoryItems.find(a => a.id === accId);
+            if (!item) return;
+
+            const currentInSlot = AppState.activeAccessories[item.slot];
+            if (currentInSlot && currentInSlot.id === item.id) {
+                AppState.activeAccessories[item.slot] = null;
+                showToast(`Removed ${item.title}`, "info");
+            } else {
+                AppState.activeAccessories[item.slot] = item;
+                showToast(`Equipped ${item.title}`, "success");
+            }
+
+            renderAtelierAccessoriesBar();
+            renderWardrobeGrid(AppState.currentCatalogFilter || 'all');
+        }
+
+        function clearAllAccessories() {
+            Object.keys(AppState.activeAccessories).forEach(k => AppState.activeAccessories[k] = null);
+            renderAtelierAccessoriesBar();
+            renderWardrobeGrid(AppState.currentCatalogFilter || 'all');
+            showToast("All jewelry & accessories removed", "info");
+        }
+
+        function filterAccessoryBar(slot, btnEl) {
+            AppState.accessoryFilter = slot;
+            document.querySelectorAll('.acc-tab-btn').forEach(b => {
+                b.className = "acc-tab-btn px-3 py-1 rounded-lg bg-surface text-gray-400 hover:text-white border border-white/5 shrink-0";
+            });
+            if (btnEl) {
+                btnEl.className = "acc-tab-btn px-3 py-1 rounded-lg bg-gold-500/20 text-gold-300 border border-gold-500/30 font-medium shrink-0";
+            }
+            renderAtelierAccessoriesBar();
+        }
+
+        function renderAtelierAccessoriesBar() {
+            const container = document.getElementById('atelier-accessories-grid');
+            const badge = document.getElementById('equipped-accessories-badge');
+            if (!container) return;
+
+            const equippedCount = Object.values(AppState.activeAccessories).filter(Boolean).length;
+            if (badge) badge.innerText = `${equippedCount} Equipped`;
+
+            const list = AccessoryItems.filter(item => {
+                if (AppState.accessoryFilter === 'all') return true;
+                return item.slot === AppState.accessoryFilter;
+            });
+
+            container.innerHTML = list.map(item => {
+                const isEquipped = AppState.activeAccessories[item.slot]?.id === item.id;
+                return `
+                <div onclick="toggleAccessoryById('${item.id}')" class="p-2.5 rounded-xl border transition cursor-pointer flex items-center gap-3 ${isEquipped ? 'bg-gold-500/20 border-gold-400 shadow-md shadow-gold-500/10' : 'bg-surface/80 border-white/10 hover:border-gold-500/40'}">
+                    <div class="w-12 h-12 rounded-lg bg-black/60 border border-white/10 p-1.5 flex items-center justify-center shrink-0">
+                        <img src="${item.imageUrl}" class="max-w-full max-h-full object-contain" alt="${item.title}">
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-[9px] uppercase tracking-wider font-bold ${isEquipped ? 'text-gold-300' : 'text-gray-400'}">${item.slot}</span>
+                            ${isEquipped ? '<i class="fa-solid fa-circle-check text-emerald-400 text-[11px]"></i>' : ''}
+                        </div>
+                        <h5 class="text-xs font-serif font-semibold text-white truncate">${item.title}</h5>
+                        <span class="text-[10px] text-gold-400 font-mono">${item.price}</span>
+                    </div>
+                </div>
+                `;
+            }).join('');
         }
 
         function renderWardrobeGrid(filter = 'all') {
+            AppState.currentCatalogFilter = filter;
             const grid = document.getElementById('wardrobe-grid');
             if (!grid) return;
 
-            const itemsToDisplay = CatalogItems.filter(item => {
+            const combinedCatalog = [...CatalogItems, ...AccessoryItems];
+            const itemsToDisplay = combinedCatalog.filter(item => {
                 if (filter === 'all') return true;
                 return item.category === filter;
             });
 
-            grid.innerHTML = itemsToDisplay.map(item => `
-                <div class="glass-panel p-4 rounded-2xl border border-white/10 flex flex-col justify-between hover:border-gold-500/50 transition duration-300 group">
+            grid.innerHTML = itemsToDisplay.map(item => {
+                const isAccessory = item.category === 'accessories';
+                const isEquippedAcc = isAccessory && AppState.activeAccessories[item.slot]?.id === item.id;
+
+                return `
+                <div class="glass-panel p-4 rounded-2xl border ${isEquippedAcc ? 'border-gold-400' : 'border-white/10'} flex flex-col justify-between hover:border-gold-500/50 transition duration-300 group">
                     <div>
                         <div class="w-full aspect-[3/4] bg-black/60 rounded-xl overflow-hidden mb-3 relative flex items-center justify-center p-4" style="background-image: linear-gradient(45deg, #181820 25%, transparent 25%), linear-gradient(-45deg, #181820 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #181820 75%), linear-gradient(-45deg, transparent 75%, #181820 75%); background-size: 16px 16px;">
                             <img src="${item.imageUrl}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="${item.title}">
                             ${item.category === 'custom' ? '<span class="absolute top-2 right-2 bg-gold-500 text-black font-bold text-[9px] px-2 py-0.5 rounded uppercase tracking-wider">Custom Upload</span>' : ''}
+                            ${isAccessory ? `<span class="absolute top-2 left-2 bg-gold-500/20 text-gold-300 border border-gold-500/40 font-semibold text-[9px] px-2 py-0.5 rounded uppercase tracking-wider">${item.slot}</span>` : ''}
                         </div>
                         <span class="text-[10px] text-gold-400 font-semibold uppercase tracking-wider block mb-1">${item.collection}</span>
                         <h4 class="font-serif text-base font-bold text-white mb-1 line-clamp-1">${item.title}</h4>
@@ -1478,12 +1859,19 @@
 
                     <div class="pt-3 border-t border-white/5 flex items-center justify-between">
                         <span class="font-serif text-sm font-bold text-gold-300">${item.price}</span>
-                        <button onclick="selectGarmentById('${item.id}')" class="px-3 py-1.5 gold-gradient-bg text-black font-bold rounded-lg text-xs uppercase tracking-wider hover:brightness-110 transition flex items-center gap-1">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Try On
-                        </button>
+                        ${isAccessory ? `
+                            <button onclick="toggleAccessoryById('${item.id}'); switchTab('atelier');" class="px-3 py-1.5 ${isEquippedAcc ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'gold-gradient-bg text-black'} font-bold rounded-lg text-xs uppercase tracking-wider hover:brightness-110 transition flex items-center gap-1">
+                                <i class="fa-solid ${isEquippedAcc ? 'fa-check' : 'fa-gem'}"></i> ${isEquippedAcc ? 'Equipped' : 'Try On'}
+                            </button>
+                        ` : `
+                            <button onclick="selectGarmentById('${item.id}')" class="px-3 py-1.5 gold-gradient-bg text-black font-bold rounded-lg text-xs uppercase tracking-wider hover:brightness-110 transition flex items-center gap-1">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Try On
+                            </button>
+                        `}
                     </div>
                 </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         function filterCatalog(cat) {
@@ -1622,9 +2010,7 @@
 
                     showToast(`Key color sampled: RGB(${p[0]}, ${p[1]}, ${p[2]})`, "info");
                     processBackgroundRemoval();
-                } catch(e) {
-                    console.warn("Eyedropper pixel sampling error:", e);
-                }
+                } catch(e) {}
             };
             tempImg.src = AppState.uploadedOriginalDataUrl;
         }
@@ -1782,7 +2168,6 @@
                     showToast("Background isolated successfully!", "success");
 
                 } catch (err) {
-                    console.error("Background removal processing error:", err);
                     if (statusText) statusText.innerText = "Background removal failed on this image. You can still try on the original image.";
                     showToast("Background processing error. Using original image.", "error");
                 }
@@ -1886,7 +2271,6 @@
                     AppState.savedSnapshots = JSON.parse(raw);
                 }
             } catch (e) {
-                console.warn("Could not load snapshots from localStorage:", e);
                 AppState.savedSnapshots = [];
             }
             renderSnapshotGalleries();
@@ -1896,21 +2280,17 @@
             try {
                 localStorage.setItem(STORAGE_KEY_SNAPSHOTS, JSON.stringify(AppState.savedSnapshots));
             } catch (e) {
-                // If storage quota exceeded, remove oldest snapshot and retry
                 if (AppState.savedSnapshots.length > 1) {
                     AppState.savedSnapshots.pop();
                     try {
                         localStorage.setItem(STORAGE_KEY_SNAPSHOTS, JSON.stringify(AppState.savedSnapshots));
-                    } catch (err) {
-                        console.warn("Storage quota limit reached:", err);
-                    }
+                    } catch (err) {}
                 }
             }
         }
 
         function captureSnapshot() {
             try {
-                // Create clean offscreen canvas without posture guide or sampler box overlays
                 const snapCanvas = document.createElement('canvas');
                 snapCanvas.width = canvas.width || 600;
                 snapCanvas.height = canvas.height || 800;
@@ -1918,20 +2298,21 @@
 
                 renderCleanSceneToContext(snapCtx, snapCanvas.width, snapCanvas.height);
 
-                // Add subtle luxury VALOIS watermark in bottom-right of captured photo
+                // Watermark with requested "NTHYKTPDSS STEAM 2026"
                 snapCtx.save();
-                snapCtx.font = 'bold 18px Cinzel, serif';
-                snapCtx.fillStyle = 'rgba(212, 175, 55, 0.85)';
+                snapCtx.font = 'bold 16px Cinzel, serif';
+                snapCtx.fillStyle = 'rgba(212, 175, 55, 0.9)';
                 snapCtx.textAlign = 'right';
-                snapCtx.fillText('VALOIS ATELIER', snapCanvas.width - 20, snapCanvas.height - 24);
+                snapCtx.fillText('NTHYKTPDSS STEAM 2026', snapCanvas.width - 20, snapCanvas.height - 24);
                 snapCtx.font = '10px Inter, sans-serif';
-                snapCtx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-                snapCtx.fillText(AppState.activeGarment ? AppState.activeGarment.title.toUpperCase() : 'BESPOKE LOOK', snapCanvas.width - 20, snapCanvas.height - 10);
+                snapCtx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+                const equippedAccNames = Object.values(AppState.activeAccessories).filter(Boolean).map(a => a.slot.toUpperCase());
+                const subtitleText = (AppState.activeGarment && AppState.garmentTryOnEnabled ? AppState.activeGarment.title.toUpperCase() : 'ACCESSORIES TRY-ON') + (equippedAccNames.length ? ` + ${equippedAccNames.join(' • ')}` : '');
+                snapCtx.fillText(subtitleText, snapCanvas.width - 20, snapCanvas.height - 10);
                 snapCtx.restore();
 
                 const highResDataUrl = snapCanvas.toDataURL('image/jpeg', 0.90);
 
-                // Create a medium-resolution mobile transfer copy for fast cloud upload & instant QR link generation
                 const mobileCanvas = document.createElement('canvas');
                 const scaleFactor = Math.min(1, 720 / snapCanvas.height);
                 mobileCanvas.width = Math.round(snapCanvas.width * scaleFactor);
@@ -1948,13 +2329,12 @@
                     imageUrl: highResDataUrl,
                     uploadDataUrl: mobileUploadDataUrl,
                     remoteDownloadUrl: null,
-                    garmentTitle: AppState.activeGarment ? AppState.activeGarment.title : 'Valois Bespoke Look',
+                    garmentTitle: AppState.activeGarment && AppState.garmentTryOnEnabled ? AppState.activeGarment.title : 'NTHYKTPDSS Look',
                     garmentPrice: AppState.activeGarment ? AppState.activeGarment.price : '$3,450 USD',
                     skinHex: AppState.sampledColor.hex,
                     timestamp: `${dateStr} • ${timestampStr}`
                 };
 
-                // Store in Website State & Persist to LocalStorage
                 AppState.savedSnapshots.unshift(newSnapshot);
                 if (AppState.savedSnapshots.length > 16) {
                     AppState.savedSnapshots.pop();
@@ -1962,17 +2342,14 @@
                 saveSnapshotsToStorage();
                 renderSnapshotGalleries();
 
-                // Open QR Modal & Generate QR Code for cross-device download
                 openQrModalForSnapshot(newSnapshot.id);
 
                 showToast("Photo captured! Generating mobile QR download link...", "success");
             } catch (e) {
-                console.error("Snapshot error:", e);
                 showToast("Unable to capture snapshot.", "error");
             }
         }
 
-        // Convert DataURL to Blob reliably without fetch() restrictions
         function dataURLtoBlob(dataurl) {
             const arr = dataurl.split(',');
             const mime = arr[0].match(/:(.*?);/)[1] || 'image/jpeg';
@@ -1985,13 +2362,11 @@
             return new Blob([u8arr], { type: mime });
         }
 
-        // Upload snapshot to CORS-enabled temporary cloud storage so any external device can scan the QR and download the image
         async function uploadSnapshotForCrossDeviceQR(snap) {
             const sourceDataUrl = snap.uploadDataUrl || snap.imageUrl;
             const blob = dataURLtoBlob(sourceDataUrl);
-            const cleanName = `VALOIS_Look_${snap.id}.jpg`;
+            const cleanName = `NTHYKTPDSS_Look_${snap.id}.jpg`;
 
-            // Provider 1: tmpfiles.org CORS API (Provides direct /dl/ image download URL)
             try {
                 const fd1 = new FormData();
                 fd1.append('file', blob, cleanName);
@@ -2002,18 +2377,13 @@
                 if (resp1.ok) {
                     const json1 = await resp1.json();
                     if (json1 && json1.data && json1.data.url) {
-                        // Convert standard view URL to direct download URL (/dl/)
-                        const directDlUrl = json1.data.url
+                        return json1.data.url
                             .replace('http://tmpfiles.org/', 'https://tmpfiles.org/dl/')
                             .replace('https://tmpfiles.org/', 'https://tmpfiles.org/dl/');
-                        return directDlUrl;
                     }
                 }
-            } catch (e1) {
-                console.warn("tmpfiles.org upload attempt failed, trying next provider:", e1);
-            }
+            } catch (e1) {}
 
-            // Provider 2: uguu.se CORS API (Returns direct image link)
             try {
                 const fd2 = new FormData();
                 fd2.append('files[]', blob, cleanName);
@@ -2027,11 +2397,8 @@
                         return json2.files[0].url;
                     }
                 }
-            } catch (e2) {
-                console.warn("uguu.se upload attempt failed, trying next provider:", e2);
-            }
+            } catch (e2) {}
 
-            // Provider 3: file.io CORS API (Returns direct one-time download page)
             try {
                 const fd3 = new FormData();
                 fd3.append('file', blob, cleanName);
@@ -2045,9 +2412,7 @@
                         return json3.link;
                     }
                 }
-            } catch (e3) {
-                console.warn("file.io upload attempt failed:", e3);
-            }
+            } catch (e3) {}
 
             return null;
         }
@@ -2075,7 +2440,6 @@
             urlInput.value = 'Uploading image for mobile QR download...';
             statusBadge.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1 text-gold-400"></i> Generating Download Link...';
 
-            // If we already resolved a remote link for this snapshot, render immediately
             if (snap.remoteDownloadUrl && snap.remoteDownloadUrl.startsWith('http')) {
                 spinner.classList.add('hidden');
                 renderQrCodeGraphic(snap.remoteDownloadUrl);
@@ -2086,7 +2450,6 @@
                 return;
             }
 
-            // Upload image to CORS-enabled cloud host so QR encodes a short, scannable https:// download link
             const remoteUrl = await uploadSnapshotForCrossDeviceQR(snap);
 
             spinner.classList.add('hidden');
@@ -2101,7 +2464,6 @@
                 qrLinkWrapper.href = remoteUrl;
                 statusBadge.innerHTML = '<i class="fa-solid fa-mobile-screen-button mr-1 text-emerald-400"></i> Scan with Phone to Download Image';
             } else {
-                // Local Blob URL fallback if device has no internet connection
                 const blob = dataURLtoBlob(snap.imageUrl);
                 const blobUrl = URL.createObjectURL(blob);
                 renderQrCodeGraphic(blobUrl);
@@ -2116,14 +2478,12 @@
             const qrContainer = document.getElementById('qr-code-container');
             qrContainer.innerHTML = '';
 
-            // Primary: Use high-contrast QR image API + client-side QRCode.js fallback so QR is always sharp and scannable
             const qrApiImg = document.createElement('img');
             qrApiImg.alt = 'Scan to Download Look';
             qrApiImg.className = 'w-[185px] h-[185px] object-contain block mx-auto rounded';
             qrApiImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&ecc=M&margin=4&data=${encodeURIComponent(targetUrl)}`;
 
             qrApiImg.onerror = function() {
-                // Offline / blocked fallback using client-side QRCode.js
                 qrContainer.innerHTML = '';
                 try {
                     new QRCode(qrContainer, {
@@ -2134,9 +2494,7 @@
                         colorLight: "#ffffff",
                         correctLevel: QRCode.CorrectLevel.M
                     });
-                } catch (err) {
-                    console.warn("QRCode.js fallback error:", err);
-                }
+                } catch (err) {}
             };
 
             qrContainer.appendChild(qrApiImg);
@@ -2156,7 +2514,7 @@
             if (!snap) return;
 
             const link = document.createElement('a');
-            link.download = `VALOIS_${snap.garmentTitle.replace(/\s+/g, '_')}_${snap.id}.jpg`;
+            link.download = `NTHYKTPDSS_${snap.garmentTitle.replace(/\s+/g, '_')}_${snap.id}.jpg`;
             link.href = snap.imageUrl;
             document.body.appendChild(link);
             link.click();
@@ -2195,18 +2553,15 @@
         function renderSnapshotGalleries() {
             const count = AppState.savedSnapshots.length;
 
-            // Update header badge
             const badge = document.getElementById('nav-lookbook-count');
             if (badge) badge.innerText = count;
 
-            // Toggle clear button visibility
             const clearBtn = document.getElementById('btn-clear-atelier-gallery');
             if (clearBtn) {
                 if (count > 0) clearBtn.classList.remove('hidden');
                 else clearBtn.classList.add('hidden');
             }
 
-            // 1. Render Sidebar Mini Preview (up to 3 recent)
             const sidebarContainer = document.getElementById('sidebar-snapshots-preview');
             if (sidebarContainer) {
                 if (count === 0) {
@@ -2228,7 +2583,6 @@
                 }
             }
 
-            // Card generator for main grids
             const emptyStateHTML = `
                 <div class="col-span-full py-12 text-center space-y-3 bg-surface/50 rounded-2xl border border-dashed border-white/10">
                     <div class="w-12 h-12 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mx-auto">
@@ -2349,6 +2703,83 @@
             }
 
             return 'data:image/svg+xml;utf8,' + encodeURIComponent(svgContent);
+        }
+
+        function createSVGAccessoryDataURI(type) {
+            let svg = '';
+            if (type === 'necklace-diamond') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+                    <defs>
+                        <linearGradient id="diaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="50%" stop-color="#e0f2fe"/>
+                            <stop offset="100%" stop-color="#d4af37"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M 45,30 Q 150,155 255,30" fill="none" stroke="url(#diaGrad)" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M 55,35 Q 150,175 245,35" fill="none" stroke="#d4af37" stroke-width="3" stroke-dasharray="6 6"/>
+                    <circle cx="80" cy="68" r="6" fill="#ffffff" stroke="#d4af37" stroke-width="1.5"/>
+                    <circle cx="110" cy="92" r="7" fill="#ffffff" stroke="#d4af37" stroke-width="1.5"/>
+                    <circle cx="150" cy="105" r="9" fill="#ffffff" stroke="#d4af37" stroke-width="2"/>
+                    <circle cx="190" cy="92" r="7" fill="#ffffff" stroke="#d4af37" stroke-width="1.5"/>
+                    <circle cx="220" cy="68" r="6" fill="#ffffff" stroke="#d4af37" stroke-width="1.5"/>
+                    <polygon points="150,114 164,142 150,166 136,142" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+                </svg>`;
+            } else if (type === 'necklace-pearl') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+                    <path d="M 55,35 Q 150,130 245,35" fill="none" stroke="#fdf8e6" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 15"/>
+                    <path d="M 45,45 Q 150,155 255,45" fill="none" stroke="#f3e5ab" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 18"/>
+                    <rect x="136" y="88" width="28" height="22" rx="4" fill="#0f5257" stroke="#d4af37" stroke-width="3"/>
+                </svg>`;
+            } else if (type === 'hairclip-barrette') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                    <g transform="rotate(-15 100 60)">
+                        <path d="M 30,60 Q 100,35 170,60 Q 100,85 30,60 Z" fill="#d4af37" stroke="#fdf8e6" stroke-width="2"/>
+                        <circle cx="65" cy="60" r="9" fill="#fdf8e6"/>
+                        <circle cx="100" cy="60" r="12" fill="#ffffff" stroke="#e6ca65" stroke-width="2"/>
+                        <circle cx="135" cy="60" r="9" fill="#fdf8e6"/>
+                        <path d="M 85,42 L 100,25 L 115,42" fill="none" stroke="#d4af37" stroke-width="3"/>
+                    </g>
+                </svg>`;
+            } else if (type === 'hairclip-tiara') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="320" height="160">
+                    <path d="M 35,130 Q 160,95 285,130" fill="none" stroke="#d4af37" stroke-width="6" stroke-linecap="round"/>
+                    <polygon points="160,18 178,105 142,105" fill="#fdf8e6" stroke="#d4af37" stroke-width="2.5"/>
+                    <polygon points="110,45 128,112 96,112" fill="#ffffff" stroke="#d4af37" stroke-width="2"/>
+                    <polygon points="210,45 224,112 192,112" fill="#ffffff" stroke="#d4af37" stroke-width="2"/>
+                    <polygon points="68,75 84,120 58,120" fill="#e6ca65" stroke="#d4af37" stroke-width="1.5"/>
+                    <polygon points="252,75 262,120 236,120" fill="#e6ca65" stroke="#d4af37" stroke-width="1.5"/>
+                    <circle cx="160" cy="14" r="6" fill="#ffffff"/>
+                </svg>`;
+            } else if (type === 'earrings-drop') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" width="360" height="160">
+                    <circle cx="35" cy="30" r="9" fill="#d4af37" stroke="#ffffff" stroke-width="2"/>
+                    <line x1="35" y1="39" x2="35" y2="75" stroke="#d4af37" stroke-width="3"/>
+                    <polygon points="35,70 50,105 35,135 20,105" fill="#f3e5ab" stroke="#d4af37" stroke-width="2.5"/>
+                    <circle cx="325" cy="30" r="9" fill="#d4af37" stroke="#ffffff" stroke-width="2"/>
+                    <line x1="325" y1="39" x2="325" y2="75" stroke="#d4af37" stroke-width="3"/>
+                    <polygon points="325,70 340,105 325,135 310,105" fill="#f3e5ab" stroke="#d4af37" stroke-width="2.5"/>
+                </svg>`;
+            } else if (type === 'bracelet-cuff') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" width="180" height="120">
+                    <ellipse cx="90" cy="55" rx="60" ry="26" fill="none" stroke="#d4af37" stroke-width="14"/>
+                    <ellipse cx="90" cy="68" rx="58" ry="24" fill="none" stroke="#f3e5ab" stroke-width="8"/>
+                    <polygon points="90,38 106,55 90,72 74,55" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+                </svg>`;
+            } else if (type === 'ring-emerald') {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+                    <ellipse cx="60" cy="68" rx="32" ry="16" fill="none" stroke="#d4af37" stroke-width="8"/>
+                    <rect x="42" y="32" width="36" height="28" rx="6" fill="#059669" stroke="#fdf8e6" stroke-width="4"/>
+                    <rect x="48" y="38" width="24" height="16" rx="2" fill="#34d399"/>
+                </svg>`;
+            } else {
+                svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 120" width="340" height="120">
+                    <path d="M 20,45 L 145,45 L 170,55 L 195,45 L 320,45" fill="none" stroke="#d4af37" stroke-width="5" stroke-linecap="round"/>
+                    <polygon points="35,45 145,45 135,95 45,90" fill="rgba(24,24,36,0.72)" stroke="#d4af37" stroke-width="3"/>
+                    <polygon points="195,45 305,45 295,90 205,95" fill="rgba(24,24,36,0.72)" stroke="#d4af37" stroke-width="3"/>
+                </svg>`;
+            }
+            return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
         }
 
         function rgbToHex(r, g, b) {
